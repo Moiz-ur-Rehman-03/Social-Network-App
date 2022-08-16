@@ -1,34 +1,33 @@
-//external imports
+// external imports
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 
-//to access .env variables
+// to access .env variables
 dotenv.config();
 
-//creating connection with MongoDB 
+// creating connection with MongoDB
 const dbConnect = () => {
-
-  //parameters for connection
+  // parameters for connection
   const connectionParams = { useNewUrlParser: true };
 
-  //connecting with MondoDB
+  // connecting with MondoDB
   mongoose.connect(process.env.DB_CONNECTION, connectionParams);
 
-  //on connection
+  // on connection
   mongoose.connection.on('connected', () => {
     console.log('Connected to MongoDB sucessfully');
   });
 
-  //on some error
+  // on some error
   mongoose.connection.on('error', (err) => {
-    console.log('Error while connecting to MongoDB :' + err);
+    console.log(`Error while connecting to MongoDB :${err}`);
   });
 
-  //on disconnection 
+  // on disconnection
   mongoose.connection.on('disconnected', () => {
     console.log('MongoDB connection disconnected');
   });
 };
 
-//exporting the connection function
+// exporting the connection function
 module.exports = dbConnect;
