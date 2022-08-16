@@ -11,4 +11,4 @@ npm start
 [Website Link](https://social-network-app-03.herokuapp.com/)
 
 ## Testing on Postman:
-Postman Documentation with Collection and its Enviormetn: [Website Link](https://documenter.getpostman.com/view/22404453/VUjTj34F)
+Postman Documentation with Collection and its Enviormetn: [Published Link](https://documenter.getpostman.com/view/22404453/VUjTj34F)
